@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0"
+  },
+  "name": "contact_list",
+  "version": "1.0.0",
+  "description": "A simple contacts app to learn express js",
+  "main": "contacts_list.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon index.js"
+  },
+  "author": "Rohit Saini",
+  "license": "ISC"
+}

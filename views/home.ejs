@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/home.css">
+    </head>
+    <body>
+        <h1 id="page-heading" class="center">
+            <i class="fa-solid fa-address-book"></i>
+            My Contact List
+        </h1>
+        <div id="contacts-list-container">
+            <ul id="list">
+                <%for(let i of contact_List){%> 
+                    <!-- Why we used "for of" here READ ABOUT for of loop -->
+                <li class="contact">
+                    <div class="details">
+                        <p><%= i.name %></p>
+                        <p><%= i.phone %></p>
+                    </div>
+                    <div class="delete-button">
+                        <a href="/delete-contact/?id=<%= i._id %>">
+                            <i class="fa fa-times-circle"></i>
+                        </a>
+                    </div>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <form id="new-contact-form" action="/create-contact" method="post" class="center">
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="number" name="phone" placeholder="Enter Phone" required>
+            <button type="submit" >Add </button>
+        </form>
+        <script src="https://kit.fontawesome.com/67158c7aea.js" crossorigin="anonymous"></script>
+    </body>
+</html>
